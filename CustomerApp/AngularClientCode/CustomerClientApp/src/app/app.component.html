@@ -1,0 +1,23 @@
+<b>Hello this is Customer Application</b><br />
+Name :- <input type ="text" [(ngModel)]="customerObj.customerName"/><br />
+Address :- <input type ="text" [(ngModel)]="customerObj.address"/><br />
+<input (click)="Add()" type ="button" value="Add"/>
+<br />
+
+{{customerObj.customerName}}<br />
+{{customerObj.address}}
+
+<!--ng for="let cust of customer Objs..."-->
+
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Address</td>
+    </tr>
+    <tr *ngFor="let row of customerObjs">
+        <td>{{row.customerName}}</td>
+        <td>{{row.address}}</td>
+    </tr>
+</table>
+
+
